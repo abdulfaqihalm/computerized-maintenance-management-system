@@ -10,14 +10,14 @@ You must register yourself to use this app. There are several roles on this app 
 ## Configuration
 ### Prerequisites
 
-[Laravel 5.6 >](https://laravel.com/docs/5.6/installation)
-[PHP 7.2 >](http://php.net/manual/en/install.php)
+- [Laravel 5.6 +](https://laravel.com/docs/5.6/installation)
+- [PHP 7.2 +](http://php.net/manual/en/install.php)
 
 
 ### Package
 
-[Entrust Package](https://github.com/Zizaco/entrust)
-[Forms & HTML Package](https://laravelcollective.com/docs/5.2/html) 
+- [Entrust Package](https://github.com/Zizaco/entrust)
+- [Forms & HTML Package](https://laravelcollective.com/docs/5.2/html) 
 
 
 ### DB
@@ -36,9 +36,9 @@ You must register yourself to use this app. There are several roles on this app 
 
 ### Running the tests
 
-- YOu can use Laravel Inbuilt-Server or XAMPP
+- You can use Laravel Inbuilt-Server or XAMPP
     - For Inbuilt-Server just type __php serve artisan__ on your terminal. The app will be ran on __localhost:8000/__
-    - If you use XAMPP make sure it supports PHP 7.1 > 
+    - If you use XAMPP make sure it supports PHP 7.1 +
 
 
 ## Deployment
@@ -59,9 +59,8 @@ This project has specific requirements. But if you feel you can contribute, dont
 
 ## Authors
 
-* **Farhad Zamani** - *Initial work* - [PurpleBooth](https://github.com/farzamani)
-
-* **Abdullah Faqih** - *Initial work* - [PurpleBooth](https://github.com/abdulfaqihalm)
+*  [Abdullah Faqih](https://github.com/abdulfaqihalm) - *Initial work* 
+*  [Farhad Zamani](https://github.com/farzamani) - *Initial work*
 
 See also the list of [contributors](https://github.com/abdulfaqihalm/cmms/contributors) who participated in this project.
 
