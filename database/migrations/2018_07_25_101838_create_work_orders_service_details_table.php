@@ -19,7 +19,7 @@ class CreateWorkOrdersServiceDetailsTable extends Migration
             $table->string('object');
             $table->integer('part_qty');
             $table->dateTime('start_time');
-            $table->dateTime('finish_time');
+            $table->dateTime('finish_time'); // Masih bisa bocor bre. kalau kasus servicenya 30 hari gimana? 30 Kolom?  
             $table->timestamps();
         });
     }
