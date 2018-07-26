@@ -2,83 +2,71 @@
 
 This Computer Maintenance Management System project is the project that we've been worked on our internship period at SMU Healthcare. This web can be used by the company to tidy up the maintanance system. 
 
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You must register yourself to use this app. There are several roles on this app : Admin, Engineer, ...... . Each of these roles comes up with different permissions. For example, Admin can control everything on the app. Meanwhile, the Engineer can only make work orders.
 
-### Prerequisites
+##Configuration
+###Prerequisites
 
-Laravel 5.6 >
-PHP 7.2 >
+[Laravel 5.6 >](https://laravel.com/docs/5.6/installation)
+[PHP 7.2 >](http://php.net/manual/en/install.php)
 
-### Installing
 
-A step by step series of examples that tell you how to get a development env running
+###Package
 
-Say what the step will be
+[Entrust Package](https://github.com/Zizaco/entrust)
+[Forms & HTML Package](https://laravelcollective.com/docs/5.2/html) 
 
-```
-Give the example
-```
 
-And repeat
+###DB
+- Create new file with __.env__ extension
+- Copy and paste everything from __.env.example__ file
+- Open the __.env__ file, edit __DB_DATABASE__ to give the type of database you will use and also edit your __DB_USERNAME__ and __DB_PASSWORD__
+- Run __php artisan migrate__ on your clone folder 
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
+###Installing
 
-## Running the tests
+- Clone everything from the github
+- Run __Composer update__ on your cloned folder
+- Generate __APP-KEY__ by typing __php artisan generate:key__ on terminal 
 
-Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+### Running the tests
 
-Explain what these tests test and why
+- YOu can use Laravel Inbuilt-Server or XAMPP
+    - For Inbuilt-Server just type __php serve artisan__ on your terminal. The app will be ran on __localhost:8000/__
+    - If you use XAMPP make sure it supports PHP 7.1 > 
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This system will be deployed soon
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Laravel](https://laravel.com/docs/5.6)
+* [Bootstrap](https://getbootstrap.com/)
+
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+This project has specific requirements. But if you feel you can contribute, dont hesitate to contact us! 
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Farhad Zamani** - *Initial work* - [PurpleBooth](https://github.com/farzamani)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Abdullah Faqih** - *Initial work* - [PurpleBooth](https://github.com/abdulfaqihalm)
+
+See also the list of [contributors](https://github.com/abdulfaqihalm/cmms/contributors) who participated in this project.
+
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc

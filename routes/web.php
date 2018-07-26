@@ -11,6 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/','GuestController@getPage');
+
+
+// Default laravel for User Auth
+Auth::routes();
+
+// CRUD ROUTING 
+
+// Route for Admin only 
+Route::group(['middleware' => ['auth', 'role:Admin']], function() {
+    Route::resource('/part','PartController');
+    Route::resource('/site','SiteController');
+    Route::resource('/purchaseorder','PurchaseOrderController');
 });
+
+// Route for Admin, Engineer, ... and ...
+Route::group(['middleware' => ['auth', 'role:Engineer|Admin']], function() {
+    Route::resource('/request','RequestOrderController');
+    Route::resource('/workordersdetail','WorkOrdersDetailController');
+    Route::resource('/workordersservicedetail','WorkOrdersServiceDetailController');
+});
+
+
+
+Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
