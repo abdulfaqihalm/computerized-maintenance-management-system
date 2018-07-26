@@ -7,27 +7,27 @@ This Computer Maintenance Management System project is the project that we've be
 
 You must register yourself to use this app. There are several roles on this app : Admin, Engineer, ...... . Each of these roles comes up with different permissions. For example, Admin can control everything on the app. Meanwhile, the Engineer can only make work orders.
 
-##Configuration
-###Prerequisites
+## Configuration
+### Prerequisites
 
 [Laravel 5.6 >](https://laravel.com/docs/5.6/installation)
 [PHP 7.2 >](http://php.net/manual/en/install.php)
 
 
-###Package
+### Package
 
 [Entrust Package](https://github.com/Zizaco/entrust)
 [Forms & HTML Package](https://laravelcollective.com/docs/5.2/html) 
 
 
-###DB
+### DB
 - Create new file with __.env__ extension
 - Copy and paste everything from __.env.example__ file
 - Open the __.env__ file, edit __DB_DATABASE__ to give the type of database you will use and also edit your __DB_USERNAME__ and __DB_PASSWORD__
 - Run __php artisan migrate__ on your clone folder 
 
 
-###Installing
+### Installing
 
 - Clone everything from the github
 - Run __Composer update__ on your cloned folder
