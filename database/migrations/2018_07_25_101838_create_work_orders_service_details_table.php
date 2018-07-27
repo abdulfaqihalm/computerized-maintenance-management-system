@@ -18,8 +18,9 @@ class CreateWorkOrdersServiceDetailsTable extends Migration
             $table->string('task');
             $table->string('object');
             $table->integer('part_qty');
+            // this must be include to the other table 
             $table->dateTime('start_time');
-            $table->dateTime('finish_time');  
+            $table->dateTime('finish_time'); 
             $table->timestamps();
         });
     }
