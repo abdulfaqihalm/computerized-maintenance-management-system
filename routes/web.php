@@ -21,14 +21,14 @@ Auth::routes();
 
 // Route for Admin only 
 Route::group(['middleware' => ['auth', 'role:Admin']], function() {
-    Route::resource('/part','PartController');
-    Route::resource('/site','SiteController');
-    Route::resource('/purchaseorder','PurchaseOrderController');
+    Route::resource('/part','PartController')->except(['show']);
+    Route::resource('/site','SiteController')->except(['show']);
+    Route::resource('/purchaseorder','PurchaseOrderController')->except(['edit','update']);
 });
 
 // Route for Admin, Engineer, ... and ...
 Route::group(['middleware' => ['auth', 'role:Engineer|Admin']], function() {
-    Route::resource('/request','RequestOrderController');
+    Route::resource('/request','RequestOrderController')->except(['edit','update']);
     Route::resource('/workordersdetail','WorkOrdersDetailController');
     Route::resource('/workordersservicedetail','WorkOrdersServiceDetailController');
 });

@@ -1,11 +1,34 @@
-.btn-h1-spacing {
-    margin-top: 18px; 
+* {
+    box-sizing: content-box;
+    margin : 0px;
+    padding: 0px;
 }
 
-.form-top-spacing {
-    margin-top: 30px;
+nav {
+    background-color: #798190;
 }
 
-.btn-top-spacing { 
-    margin-top: 20px;
+.col-form-label:hover {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.container-fluid {
+    background-color: #CEEBFB;
+}
+
+body {
+    font-family: Raleway, sans-serif !important;
+}
+
+.service-form {
+    margin-top: 100px;
+}
+
+.time-label .card-header{
+    padding: 5px !important;
+}
+
+footer {
+    margin-top: 50px;
 }
