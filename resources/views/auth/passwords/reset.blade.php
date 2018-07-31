@@ -4,12 +4,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center main-content">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card">
-                <h3 class="text-center">Reset Password</h3>
-                <hr>
-
+            <div class="card shadow-sm">
+                <h3 class="text-center card-header">Reset Password</h3>
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.request') }}" aria-label="{{ __('Reset Password') }}">
                         @csrf

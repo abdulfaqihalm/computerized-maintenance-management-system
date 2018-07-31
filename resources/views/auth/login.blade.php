@@ -4,11 +4,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row main-content justify-content-center">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card">
-                <h3 class="text-center">Login</h3>
-                <hr>
+            <div class="card shadow-sm">
+                <h3 class="text-center card-header">Login</h3>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf

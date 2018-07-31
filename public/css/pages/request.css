@@ -1,0 +1,21 @@
+* {
+    margin : 0px;
+    padding: 0px;
+}
+
+.main-content {
+    margin-top: 100px;
+}
+
+.container {
+    padding: 20px;
+    justify-content: center;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+}

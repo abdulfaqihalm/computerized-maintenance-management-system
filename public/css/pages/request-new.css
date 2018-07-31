@@ -1,0 +1,30 @@
+.* {
+    box-sizing: content-box;
+    margin : 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Raleway, sans-serif !important;
+}
+
+.new-request-form {
+    margin: 100px 0 0 0;
+}
+
+.container {
+    padding: 20px;
+    justify-content: center;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.card-label .card-header {
+    padding: 5px !important;
+}

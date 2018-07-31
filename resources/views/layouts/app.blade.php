@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html
+><html lang="en">
 <head>
-    @include('partial._head');
+    @include('partial._head')
+    @yield('stylesheets')
 </head>
 <body>
-    <div id="app">
-        @include('partial._nav');
-        <main class="py-4">
-            @yield('content')
-        </main>
+
+    <div class="container-fluid">
+        @include('partial._nav')
+        @yield('content')
+        @include('partial._footer')
     </div>
+
+    @include('partial._javascripts')
+    @yield('scripts')
+
 </body>
 </html>
