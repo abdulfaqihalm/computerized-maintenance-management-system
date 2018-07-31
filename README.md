@@ -12,7 +12,7 @@ You must register yourself to use this app. There are several roles on this app 
 
 - [Laravel 5.6 +](https://laravel.com/docs/5.6/installation)
 - [PHP 7.2 +](http://php.net/manual/en/install.php)
-
+- [mysql server 5.7 +](http://php.net/manual/en/install.php)
 
 ### Package
 
@@ -20,18 +20,23 @@ You must register yourself to use this app. There are several roles on this app 
 - [Forms & HTML Package](https://laravelcollective.com/docs/5.2/html) 
 
 
-### DB
-- Create new file with __.env__ extension
-- Copy and paste everything from __.env.example__ file
-- Open the __.env__ file, edit __DB_DATABASE__ to give the type of database you will use and also edit your __DB_USERNAME__ and __DB_PASSWORD__
-- Run __php artisan migrate__ on your clone folder 
-
-
 ### Installing
 
 - Clone everything from the github
 - Run __Composer update__ on your cloned folder
-- Generate __APP-KEY__ by typing __php artisan generate:key__ on terminal 
+- Run __php artisan vendor:publish__ on your cloned folder
+- Create new file with __.env__ extension
+- Copy and paste everything from __.env.example__ file
+- Open the __.env__ file, edit __DB_DATABASE__ to give the schema's name of your database and also edit your __DB_USERNAME__ and __DB_PASSWORD__
+- Run __php artisan migrate__ on your clone folder to create table on your DB
+- Generate __APP-KEY__ by typing __php artisan key:generate__ on terminal 
+
+
+### DB
+
+- This app using mysql as default database
+- If you use mysql, you can edit the default scheme, tables, and other things with DB GUI (MySQL Workbench)
+- NOTE : If you install the newest version of MySQL server (V. , you will get some errors
 
 
 ### Running the tests
