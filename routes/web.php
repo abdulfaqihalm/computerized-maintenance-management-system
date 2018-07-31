@@ -11,15 +11,29 @@
 |
 */
 
+
+//Dummy Route
+Route::get('/part-index', function () {
+    return view('parts.index');
+});
+
+Route::get('/edit-part', function () {
+    return view('parts.edit');
+});
+
+Route::get('/create-part', function () {
+    return view('parts.create');
+});
+
 Route::get('/','GuestController@getPage');
 
 
 // Default laravel for User Auth
 Auth::routes();
 
-// CRUD ROUTING 
+// CRUD ROUTING
 
-// Route for Admin only 
+// Route for Admin only
 Route::group(['middleware' => ['auth', 'role:Admin']], function() {
     Route::resource('/part','PartController');
     Route::resource('/site','SiteController');
@@ -36,3 +50,4 @@ Route::group(['middleware' => ['auth', 'role:Engineer|Admin']], function() {
 
 
 Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
+

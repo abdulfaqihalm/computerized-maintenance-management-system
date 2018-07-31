@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Site; 
 class SiteController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class SiteController extends Controller
      */
     public function index()
     {
-        //
+        $sites = Site::all();
+        return view('sites.index',['sites'=>$sites]);
     }
 
     /**
@@ -23,7 +24,7 @@ class SiteController extends Controller
      */
     public function create()
     {
-        //
+        return view('sites.create');
     }
 
     /**
@@ -34,18 +35,31 @@ class SiteController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $site = new Site;
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $this->validate($request, [
+            'hospital' => 'required|max:255',
+            'address' => 'required|max:255',
+            'model' => 'required|max:255',
+            'siteId' => 'required|max:255|unique:sites',
+            'manufacture_system' => 'required|max:255',
+            'equipment_serial_number' => 'required|max:255',
+            'warranty_status' => 'required|max:255'
+        ]);
+
+        $site->hospital = $request->input('hospital');
+        $site->address = $request->input('address');
+        $site->model = $request->input('model');
+        $site->siteId = $request->input('siteId');
+        $site->manufacture_system = $request->input('manufacture_system');
+        $site->equipment_serial_number = $request->input('equipment_serial_number');
+        $site->warranty_status = $request->input('warranty_status'); 
+
+        $site->save();
+
+        session()->flash('create', 'New site');
+
+        return redirect()->route('site.index');
     }
 
     /**
@@ -56,7 +70,8 @@ class SiteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $site = Site::find($id);
+        return view('sites.edit', ['site'=>$site]); 
     }
 
     /**
@@ -68,7 +83,32 @@ class SiteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $site = Site::find($id);
+
+        $this->validate($request, [
+            'hospital' => 'required|max:255',
+            'address' => 'required|max:255',
+            'model' => 'required|max:255',
+            'siteId' => 'required|max:255|unique:sites',
+            'manufacture_system' => 'required|max:255',
+            'equipment_serial_number' => 'required|max:255',
+            'warranty_status' => 'required|max:255'
+        ]);
+
+        $site->hospital = $request->input('hospital');
+        $site->address = $request->input('address');
+        $site->model = $request->input('model');
+        $site->siteId = $request->input('siteId');
+        $site->manufacture_system = $request->input('manufacture_system');
+        $site->equipment_serial_number = $request->input('equipment_serial_number');
+        $site->warranty_status = $request->input('warranty_status'); 
+
+        $site->save();
+
+        session()->flash('edit', 'site');
+
+        return redirect()->route('site.index');
+
     }
 
     /**
@@ -79,6 +119,11 @@ class SiteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $site = Site::find($id);
+        $site->delete();
+        
+        session()->flash('delete', 'Site');
+
+        return redirect()->route('site.index');
     }
 }

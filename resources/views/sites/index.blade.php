@@ -39,7 +39,7 @@
                                 <td>IGS320PQWE4R5TYOKM8989JDU8</td>
                                 <td>August 2025</td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
                                     <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
                                 </td>
                             </tr>
@@ -53,7 +53,7 @@
                                 <td>IGS320PQWE4R5TYOKM8989JDU8</td>
                                 <td>August 2025</td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
                                     <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
                                 </td>
                             </tr>
@@ -67,7 +67,7 @@
                                 <td>IGS320PQWE4R5TYOKM8989JDU8</td>
                                 <td>August 2025</td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
                                     <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
                                 </td>
                             </tr>
@@ -81,7 +81,7 @@
                                 <td>IGS320PQWE4R5TYOKM8989JDU8</td>
                                 <td>August 2025</td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
                                     <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
                                 </td>
                             </tr>
@@ -95,7 +95,7 @@
                                 <td>IGS320PQWE4R5TYOKM8989JDU8</td>
                                 <td>August 2025</td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
                                     <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
                                 </td>
                             </tr>

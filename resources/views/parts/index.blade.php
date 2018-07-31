@@ -4,18 +4,18 @@
 
 @section('stylesheets')
     <!-- For addition styelsheets -->
-    <link rel="stylesheet" type="text/css" href="{{asset('datatable/datatables.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('css/datatables.css') }}">
 @endsection
 
 @section('content')
     <!-- Contents of this page -->
-    <section class="row main-content justify-content-between">
+    <section class="row main-content justify-content-center">
         <div class="col-md-11">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Parts List<a href="{{route('part.create')}}"><button class="btn btn-outline-info float-right">Add New Part</button></a></h3>
+                <h3 class="page-title card-header">Parts List<a href="create-part"><button class="btn btn-outline-info float-right">Add New Part</button></a></h3>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered" id="partsList">
+                        <table class="table table-hover table-bordered table-striped" id="partsList">
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -26,6 +26,7 @@
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Cost</th>
                                 <th scope="col">Last Updated Date</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -38,6 +39,10 @@
                                 <td>10</td>
                                 <td>1000000</td>
                                 <td>16:04 17 Agustus 2018</td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
@@ -48,6 +53,10 @@
                                 <td>10</td>
                                 <td>1000000</td>
                                 <td>16:04 17 Agustus 2018</td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
@@ -58,6 +67,10 @@
                                 <td>10</td>
                                 <td>1000000</td>
                                 <td>16:04 17 Agustus 2018</td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
@@ -68,6 +81,10 @@
                                 <td>10</td>
                                 <td>1000000</td>
                                 <td>16:04 17 Agustus 2018</td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
@@ -78,6 +95,10 @@
                                 <td>10</td>
                                 <td>1000000</td>
                                 <td>16:04 17 Agustus 2018</td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">6</th>
@@ -88,6 +109,10 @@
                                 <td>10</td>
                                 <td>1000000</td>
                                 <td>16:04 17 Agustus 2018</td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -100,7 +125,7 @@
 
 @section('scripts')
     <!-- Scripts for this page -->
-    <script src="{{asset('datatable/datatables.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/datatables.js') }}"></script>
     <script>
         $(document).ready( function () {
             $('#partsList').DataTable();
