@@ -28,7 +28,16 @@ footer {
     bottom: 0;
     width: 100%;
     height: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer h6,p {
+    font-size: 80%;
+    color: #6c757d;
+}
+
+th {
+    text-align: center;
 }
 
 .col-form-label:hover {

@@ -13,7 +13,7 @@ class PartController extends Controller
      */
     public function index()
     {
-        //
+        return view('parts.index');//
     }
 
     /**
@@ -23,7 +23,7 @@ class PartController extends Controller
      */
     public function create()
     {
-        //
+        return view('parts.create');
     }
 
     /**

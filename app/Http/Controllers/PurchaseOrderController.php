@@ -14,7 +14,7 @@ class PurchaseOrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('purchaseorders.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class PurchaseOrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('purchaseorders.create');
     }
 
     /**

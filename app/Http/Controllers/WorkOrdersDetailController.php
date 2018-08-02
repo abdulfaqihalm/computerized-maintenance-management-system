@@ -13,7 +13,7 @@ class WorkOrdersDetailController extends Controller
      */
     public function index()
     {
-        //
+        return view('workorder.index');//
     }
 
     /**
@@ -23,7 +23,7 @@ class WorkOrdersDetailController extends Controller
      */
     public function create()
     {
-        //
+        return view('workorder.create');
     }
 
     /**

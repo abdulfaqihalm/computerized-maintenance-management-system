@@ -12,18 +12,18 @@
 */
 
 
-//Dummy Route
-Route::get('/part-index', function () {
-    return view('parts.index');
+// DUMMY ROUTES ========================================================================================>
+//SERVICE ===================================================>
+Route::get('/service', function () {
+    return view('service.create');
 });
 
-Route::get('/edit-part', function () {
-    return view('parts.edit');
+//USERS ===================================================>
+Route::get('/users', function () {
+    return view('users.index');
 });
 
-Route::get('/create-part', function () {
-    return view('parts.create');
-});
+// DUMMY ROUTES END ========================================================================================>
 
 Route::get('/','GuestController@getPage');
 
@@ -37,14 +37,14 @@ Auth::routes();
 Route::group(['middleware' => ['auth', 'role:Admin']], function() {
     Route::resource('/part','PartController');
     Route::resource('/site','SiteController');
-    Route::resource('/purchaseorder','PurchaseOrderController');
+    Route::resource('/purchase-order','PurchaseOrderController');
 });
 
 // Route for Admin, Engineer, ... and ...
 Route::group(['middleware' => ['auth', 'role:Engineer|Admin']], function() {
     Route::resource('/request','RequestOrderController');
-    Route::resource('/workordersdetail','WorkOrdersDetailController');
-    Route::resource('/workordersservicedetail','WorkOrdersServiceDetailController');
+    Route::resource('/work-order','WorkOrdersDetailController');
+    Route::resource('/service','WorkOrdersServiceDetailController');
 });
 
 

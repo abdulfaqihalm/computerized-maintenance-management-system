@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','| Create Purchase Order')
+@section('title','| Purchase Order')
 
 @section('stylesheets')
     <!-- For addition styelsheets -->

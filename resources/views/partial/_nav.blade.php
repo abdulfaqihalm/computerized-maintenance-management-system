@@ -2,8 +2,8 @@
     <div class="col-md-12">
         <div class="navbar navbar-expand-md navbar-dark fixed-top shadow">
             <a class="navbar-brand" href="#">
-                <img src="{{url('/images/logo-kotak.png')}}" height="35" class="pr-2"/>
-                SMU CMMS
+                {{--<img src="{{url('/images/logo-kotak.png')}}" height="35" class="pr-2"/>--}}
+                CMMS
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,8 +21,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{route('request.index')}}">Request</a>
                             <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{route('workordersdetail.index')}}">Work Order</a>
-                        <a class="dropdown-item" href="{{route('purchaseorder.index')}}">Purchase Order</a>
+                        <a class="dropdown-item" href="{{route('work-order.index')}}">Work Order</a>
+                        <a class="dropdown-item" href="{{route('purchase-order.index')}}">Purchase Order</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
