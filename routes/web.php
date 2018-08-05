@@ -9,30 +9,35 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+|--------------------------------------------------------------------------
+| Authentication
+|--------------------------------------------------------------------------
+| The middleware authentication occurs in Controller
 */
 
+
+// DUMMY ROUTES ========================================================================================>
+//SERVICE ===================================================>
+Route::get('/service', function () {
+    return view('service.create');
+});
+
+// DUMMY ROUTES END ========================================================================================>
+
 Route::get('/','GuestController@getPage');
-
-
-// Default laravel for User Auth
+Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 Auth::routes();
 
-// CRUD ROUTING 
-
-// Route for Admin only 
-Route::group(['middleware' => ['auth', 'role:Admin']], function() {
-    Route::resource('/part','PartController')->except(['show']);
-    Route::resource('/site','SiteController')->except(['show']);
-    Route::resource('/purchaseorder','PurchaseOrderController')->except(['edit','update']);
-});
+// Route for Admin only
+Route::resource('/part','PartController')->except(['show']);
+Route::resource('/site','SiteController')->except(['show']);
+Route::resource('/purchase-order','PurchaseOrderController')->except(['edit','update']);
+Route::resource('/user', 'UserController')->except(['show','create', 'store']);
+Route::resource('/role', 'RoleController')->except(['show', 'edit', 'update']); 
 
 // Route for Admin, Engineer, ... and ...
-Route::group(['middleware' => ['auth', 'role:Engineer|Admin']], function() {
-    Route::resource('/request','RequestOrderController')->except(['edit','update']);
-    Route::resource('/workordersdetail','WorkOrdersDetailController');
-    Route::resource('/workordersservicedetail','WorkOrdersServiceDetailController');
-});
+Route::resource('/request','RequestOrderController')->except(['edit','update']);
+Route::resource('/work-order-detail','WorkOrdersDetailController');
+Route::resource('/work-order-service-detail','WorkOrdersServiceDetailController');
 
 
-
-Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');

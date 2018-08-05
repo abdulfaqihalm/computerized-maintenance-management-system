@@ -8,6 +8,13 @@ use App\PurchaseOrder;
 class PurchaseOrderController extends Controller
 {
     /**
+     * Authenticating this controller 
+     */
+    public function __construct() {
+        $this->middleware('role:Admin');
+    }
+    
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

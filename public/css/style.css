@@ -1,11 +1,43 @@
-* {
-    box-sizing: content-box;
-    margin : 0px;
-    padding: 0px;
+html {
+    height:100%;
 }
 
-nav {
+body {
+    font-family: Raleway, sans-serif !important;
+    background-color: #CEEBFB;
+    height: 100%;
+}
+
+.container-fluid {
+    min-height: 100%;
+    position: relative;
+}
+
+.navbar {
     background-color: #798190;
+}
+
+.main-content {
+    margin-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.footer h6,p {
+    font-size: 80%;
+    color: #6c757d;
+}
+
+th {
+    text-align: center;
 }
 
 .col-form-label:hover {
@@ -13,22 +45,6 @@ nav {
     font-weight: bold;
 }
 
-.container-fluid {
-    background-color: #CEEBFB;
-}
-
-body {
-    font-family: Raleway, sans-serif !important;
-}
-
-.service-form {
-    margin-top: 100px;
-}
-
-.time-label .card-header{
+.card-label .card-header {
     padding: 5px !important;
-}
-
-footer {
-    margin-top: 50px;
 }

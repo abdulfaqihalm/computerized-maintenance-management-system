@@ -4,12 +4,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center main-content">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card">
-                <h3 class="text-center">User Register</h3>
-                <hr>
-
+            <div class="card shadow-sm">
+                <h3 class="text-center card-header">User Register</h3>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register.user') }}" aria-label="{{ __('Register') }}">
                         @csrf
@@ -43,6 +41,17 @@
                         </div>
 
                         <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+                                <div class="col-md-6">
+                                        <select class="form-control" name="role">
+                                                @foreach($roles as $role)
+                                                    <option value ='{{$role->id}}'>{{$role->name}}</option>
+                                                @endforeach 
+                                        </select>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -64,10 +73,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">
-                                {{ __('Register') }}
-                            </button>
+                        <div class="form-group row mb-0 mt-4 justify-content-center">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-secondary btn-block">Submit</button>
+                                </div>
                         </div>
                     </form>
                 </div>

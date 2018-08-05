@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','| Edit Parts')
+@section('title','| Create Purchase Order')
 
 @section('stylesheets')
     <!-- For addition styelsheets -->
@@ -11,43 +11,37 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Edit Part</h3>
+                <h3 class="page-title card-header">Create New Purchase Order</h3>
                 <div class="card-body">
                     <form class="form-horizontal" action="/action_page.php">
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="part-number">Part Number</label>
+                            <label class="col-form-label col-lg-3 text-md-right" for="part-number">Title</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="part-number" placeholder="Insert part number..." required>
+                                <input type="text" class="form-control" id="part-number" placeholder="Add Title..." required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="modality">Modality</label>
+                            <label class="col-form-label col-lg-3 text-md-right" for="modality">Category</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="modality" placeholder="Insert modality..." required>
+                                <input type="text" class="form-control" id="modality" placeholder="Insert Category..." required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="category">Category</label>
+                            <label class="col-form-label col-lg-3 text-md-right" for="category">Name</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="category" placeholder="Insert category..." required>
+                                <input type="text" class="form-control" id="category" placeholder="Insert Name..." required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="name">Description/Name</label>
+                            <label class="col-form-label col-lg-3 text-md-right" for="name">Quantity</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="name" placeholder="Insert description/name..." required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="quantity">Quantity</label>
-                            <div class="col-lg-8">
-                                <input type="number" class="form-control" id="quantity" placeholder="Insert quantity..." required>
+                                <input type="text" class="form-control" id="name" placeholder="Insert Quantity..." required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="cost">Cost</label>
                             <div class="col-lg-8">
-                                <input type="number" class="form-control" id="cost" placeholder="Insert cost..." required>
+                                <input type="number" class="form-control" id="cost" placeholder="Insert Cost..." required>
                             </div>
                         </div>
                         <div class="form-group row mb-0 mt-4 justify-content-center">

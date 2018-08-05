@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 class WorkOrdersDetailController extends Controller
 {
     /**
+     * Authenticating this controller 
+     */
+    public function __construct() {
+        $this->middleware('role:Admin|Engineer');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
