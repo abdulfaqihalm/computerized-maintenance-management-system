@@ -30,10 +30,10 @@
                             Assets
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('site.index')}}">Sites</a>
+                            <a class="dropdown-item" href="{{route('site.index')}}">Sites</a>
+                            <a class="dropdown-item" href="#">Hospital</a>
                             <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{route('part.index')}}">Parts</a>
-                            <a class="dropdown-item" href="#">Inventory</a>
+                            <a class="dropdown-item" href="{{route('part.index')}}">Parts</a>
                         </div>
                     </li>
                     <li class="nav-item">
