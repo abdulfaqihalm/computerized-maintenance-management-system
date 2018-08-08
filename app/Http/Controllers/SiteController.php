@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Site; 
+use App\Site;
 class SiteController extends Controller
 {
     /**
@@ -26,6 +26,7 @@ class SiteController extends Controller
     {
         return view('sites.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -53,7 +54,7 @@ class SiteController extends Controller
         $site->siteId = $request->input('siteId');
         $site->manufacture_system = $request->input('manufacture_system');
         $site->equipment_serial_number = $request->input('equipment_serial_number');
-        $site->warranty_status = $request->input('warranty_status'); 
+        $site->warranty_status = $request->input('warranty_status');
 
         $site->save();
 
@@ -71,7 +72,7 @@ class SiteController extends Controller
     public function edit($id)
     {
         $site = Site::find($id);
-        return view('sites.edit', ['site'=>$site]); 
+        return view('sites.edit', ['site'=>$site]);
     }
 
     /**
@@ -101,7 +102,7 @@ class SiteController extends Controller
         $site->siteId = $request->input('siteId');
         $site->manufacture_system = $request->input('manufacture_system');
         $site->equipment_serial_number = $request->input('equipment_serial_number');
-        $site->warranty_status = $request->input('warranty_status'); 
+        $site->warranty_status = $request->input('warranty_status');
 
         $site->save();
 
@@ -121,7 +122,7 @@ class SiteController extends Controller
     {
         $site = Site::find($id);
         $site->delete();
-        
+
         session()->flash('delete', 'Site');
 
         return redirect()->route('site.index');

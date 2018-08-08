@@ -23,6 +23,18 @@ Route::get('/users', function () {
     return view('users.index');
 });
 
+//HOSPITAL ===================================================>
+Route::get('/hospital', function () {
+    return view('hospital.index');
+});
+
+Route::get('/hospital/create', function () {
+    return view('hospital.create');
+});
+
+Route::get('/hospital/edit', function () {
+    return view('hospital.edit');
+});
 // DUMMY ROUTES END ========================================================================================>
 
 Route::get('/','GuestController@getPage');
