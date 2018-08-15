@@ -12,66 +12,35 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Work Orders Lists<a href="{{route('work-order.create')}}"><button class="btn btn-outline-info float-right">Create New Work Order</button></a></h3>
+                <h3 class="page-title card-header">Work Orders Lists
+                    @if(Auth::user()->hasRole('Admin'))
+                    <a href="{{ route('work-order-detail.create') }}"><button class="btn btn-outline-info float-right">Create New Work Order</button></a>
+                    @endif
+                </h3>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped table-bordered" id="woList">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">Equipment Status</th>
                                 <th scope="col">Site ID</th>
-                                <th scope="col">Stage</th>
                                 <th scope="col">Engineer</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>x-ray tube rusak</td>
-                                <td>Down</td>
-                                <td>SMU-BGR-001</td>
-                                <td>Approved</td>
-                                <td>John Doe</td>
-                                <td>
-                                    <a href=""><button class="btn btn-block btn-outline-danger btn-sm">Service Details</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>meja patah</td>
-                                <td>Down</td>
-                                <td>SMU-PDG-002</td>
-                                <td>In Progress</td>
-                                <td>Andy Serkis</td>
-                                <td>
-                                    <a href=""><button class="btn btn-block btn-outline-danger btn-sm">Service Details</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>sensor suhu mati</td>
-                                <td>Up</td>
-                                <td>SMU-PDG-001</td>
-                                <td>Completed</td>
-                                <td>Sam Smith</td>
-                                <td>
-                                    <button class="btn btn-block btn-outline-danger btn-sm">Service Details</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>AC mati</td>
-                                <td>Partial</td>
-                                <td>SMU-JKT-001</td>
-                                <td>In Progress</td>
-                                <td>John Doe</td>
-                                <td>
-                                    <button class="btn btn-block btn-outline-danger btn-sm">Service Details</button>
-                                </td>
-                            </tr>
+                            @foreach($workorderdetails as $workorderdetail)
+                                <tr>
+                                    <td>{{ $workorderdetail->title }}</td>
+                                    <td>{{ $workorderdetail->equipment_status }}</td>
+                                    <td>{{ $workorderdetail->site_id }}</td>
+                                    <td>{{ $workorderdetail->cp_name }}</td>
+                                    <td>
+                                        <a href=""><button class="btn btn-block btn-outline-danger btn-sm">Service Details</button></a>
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

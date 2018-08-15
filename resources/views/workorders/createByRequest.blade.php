@@ -11,48 +11,59 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Add New Work Order<button class="btn btn-outline-info float-right" data-toggle="modal" data-target="#requestModal">View Request</button></h3>
+                <h3 class="page-title card-header">Add New Work Order</h3>
                 <div class="card-body">
-                    <form class="form-horizontal" action="/action_page.php">
+                    <form class="form-horizontal" action="{{route('work-order-detail-by-request.store')}}" method="POST">
+                        @csrf
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="title">Title</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="title" placeholder="Singkat dan jelas!" required>
+                                <input readonly type="text" class="form-control" id="title" name="title" value="{{ $request->title }}" required>
+                                <input type="hidden" id="request_id" name="request_id" value="{{ $request->id }}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="description">Description</label>
                             <div class="col-lg-8">
-                                <textarea type="text" class="form-control" id="description" placeholder="Jelaskan lebih rinci . . ." required></textarea>
+                                <textarea readonly type="text" class="form-control" id="description" name="description" required>{{ $request->description }}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-lg-right">Equipment Status</label>
                             <div class="col-lg-8">
                                 <div class="custom-radio">
-                                    <label class="radio-inline"><input type="radio" name="eq-status" value="partial" checked="checked"> Partial</label>
+                                    <label readonly class="radio-inline"><input type="radio" name="equipment_status" value="Partial" {{$request->equipment_status=="Partial" ? 'checked' : 'readonly' }}> Partial</label>
                                 </div>
                                 <div class="custom-radio">
-                                    <label class="radio-inline"><input type="radio" name="eq-status" value="down"> Down</label>
+                                    <label readonly class="radio-inline"><input type="radio" name="equipment_status" value="Down" {{$request->equipment_status=="Down" ? 'checked' : 'readonly' }}> Down</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label text-md-right col-lg-3" for="site-id">Site ID</label>
-                            <div class="col-lg-8">
-                                <select class="form-control" id="site-id">
-                                    <option selected disabled>Choose Site ID...</option>
-                                    <option value="1">CATHLAB-BGR01</option>
-                                    <option value="2">CATHLAB-PDG01</option>
-                                    <option value="3">CATHLAB-PDG02</option>
-                                    <option value="4">CATHLAB-PDG01</option>
-                                </select>
-                            </div>
+                                <label class="col-form-label text-md-right col-lg-3" for="site">Site Id</label>
+                                <div class="col-lg-8">
+                                    <input readonly type="text" class="form-control" id="site" name="site_id" value="{{ $request->modality }}" required>
+                                </div>
+                        </div>
+                        <div class="form-group row">
+                                <label class="col-form-label text-md-right col-lg-3" for="site">Issue Detected (MM/DD/YY)</label>
+                                <div class="col-lg-8">
+                                        <input readonly type='date' class="form-control align-content-center" id="date" name="issue_detected_at" value="{{ $request->date_detected_at }}"/>
+                                </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label text-md-right col-lg-3" for="engineer">Technical Engineer</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="engineer" placeholder="Choose User . . .">
+                                @if(Auth::user()->hasRole('Admin'))
+                                    <select class="form-control hospital" id="engineer" name="cp_name">
+                                        <option value="0" disabled="true" selected="true">Choose Engineer</option>
+                                        @foreach($users as $user)
+                                            <option value="{{$user->name}}">{{$user->name}}</option>
+                                        @endforeach
+                                    </select> 
+                                @elseif(Auth::user()->hasRole('Engineer'))
+                                    <input type="text" class="form-control" id="engineer" name="cp_name" value="{{ Auth::user()->name }}">
+                                @endif 
                             </div>
                         </div>
                         <div class="form-group row justify-content-center mb-0 mt-4">

@@ -55,6 +55,7 @@ This system will be deployed soon
 
 * [Laravel](https://laravel.com/docs/5.6)
 * [Bootstrap](https://getbootstrap.com/)
+* [jQuery](https://jquery.com/)
 
 
 ## Contributing

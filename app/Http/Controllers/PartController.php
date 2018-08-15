@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Part; 
 
 class PartController extends Controller
 {
@@ -20,7 +21,8 @@ class PartController extends Controller
      */
     public function index()
     {
-        //
+        $parts = Part::all(); 
+        return view('parts.index', ['parts'=>$parts]);
     }
 
     /**
@@ -30,7 +32,7 @@ class PartController extends Controller
      */
     public function create()
     {
-        //
+        return view('parts.create');    
     }
 
     /**
@@ -41,7 +43,27 @@ class PartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $part = new Part;
+
+        $this->validate($request, [
+            'part_number'=> 'required|max:255|unique:parts',
+            'modality' =>'required|max:255',
+            'category'=>'required|max:255',
+            'description'=>'required|max:255',
+            'quantity'=>'required|integer',
+            'cost'=>'required|integer',
+        ]);
+
+        $part->part_number = $request->input('part_number');
+        $part->modality = $request->input('modality');
+        $part->category = $request->input('category');
+        $part->description = $request->input('description');
+        $part->quantity = $request->input('quantity');
+        $part->cost = $request->input('cost');
+
+        $part->save(); 
+
+        return redirect()->route('part.index'); 
     }
 
     /**
@@ -63,7 +85,8 @@ class PartController extends Controller
      */
     public function edit($id)
     {
-        //
+        $part = Part::find($id);
+        return view('parts.edit', ['part'=>$part]);
     }
 
     /**
@@ -75,7 +98,36 @@ class PartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $part = Part::find($id);
+        if($request->part_number==$part->part_number)
+        {
+            $this->validate($request, [
+                'part_number'=> 'required|max:255',
+            ]);
+        } else 
+        {
+            $this->validate($request, [
+                'part_number'=> 'required|max:255|unique:parts',
+            ]);
+        }
+        $this->validate($request, [
+            'modality' =>'required|max:255',
+            'category'=>'required|max:255',
+            'description'=>'required|max:255',
+            'quantity'=>'required|integer',
+            'cost'=>'required|integer',
+        ]);
+
+        $part->part_number = $request->input('part_number');
+        $part->modality = $request->input('modality');
+        $part->category = $request->input('category');
+        $part->description = $request->input('description');
+        $part->quantity = $request->input('quantity');
+        $part->cost = $request->input('cost');
+
+        $part->save(); 
+
+        return redirect()->route('part.index'); 
     }
 
     /**
@@ -86,6 +138,9 @@ class PartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $part = Part::find($id);
+        $part->delete(); 
+
+        return redirect()->route('part.index');
     }
 }

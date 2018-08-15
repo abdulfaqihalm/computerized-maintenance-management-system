@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','| Sites Index')
+@section('title','| Modalities Index')
 
 @section('stylesheets')
     <link rel="stylesheet" href="{{ asset('css/datatables.css') }}">
@@ -11,13 +11,12 @@
     <section class="row justify-content-center main-content">
         <div class="col-md-12">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Sites List <a href="{{route('site.create')}}"><button class="btn btn-outline-info float-right">Add New Site</button></a></h3>
+                <h3 class="page-title card-header">Modality List <a href="{{route('modality.create')}}"><button class="btn btn-outline-info float-right">Add New Modality</button></a></h3>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered table-striped" id="sitesList">
+                        <table class="table table-hover table-bordered table-striped" id="modalityList">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Hospital</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">Model</th>
@@ -29,19 +28,18 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($sites as $site)
+                            @foreach($modalities as $modality)
                             <tr>
-                                <th scope="row">{{$site->id}}</th>
-                                <td>{{$site->hospital}}</td>
-                                <td>{{$site->address}}</td>
-                                <td>{{$site->model}}</td>
-                                <td>{{$site->siteId}}</td>
-                                <td>{{$site->manufacture_system}}</td>
-                                <td>{{$site->equipment_serial_number}}</td>
-                                <td>{{$site->warranty_status}}</td>
+                                <td>{{$modality->hospital->name}}</td>
+                                <td>{{$modality->hospital->address}}</td>
+                                <td>{{$modality->model}}</td>
+                                <td>{{$modality->siteId}}</td>
+                                <td>{{$modality->manufacture_system}}</td>
+                                <td>{{$modality->equipment_serial_number}}</td>
+                                <td>{{$modality->warranty_status}}</td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
-                                    <form method="POST" action="{{route('site.destroy', $site->id)}}">
+                                    <a href="{{route('modality.edit', $modality->siteId)}}" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                    <form method="POST" action="{{route('modality.destroy', $modality->siteId)}}">
                                         @csrf
                                         @method('DELETE')
                                         <a href="" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
@@ -62,7 +60,7 @@
     <script type="text/javascript" src="{{ asset('js/datatables.js') }}"></script>
     <script>
         $(document).ready( function () {
-            $('#sitesList').DataTable();
+            $('#modalityList').DataTable();
         } );
     </script>
 @endsection

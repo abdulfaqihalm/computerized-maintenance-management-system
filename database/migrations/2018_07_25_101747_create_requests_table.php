@@ -18,11 +18,12 @@ class CreateRequestsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('equipment_status');
-            $table->string('hospital');
-            //$table->dateTime('issue_detected_at'); assuming the 
-            //site operator will fill the CMMS immidiately, it will use timestamps()
-            $table->string('cp_name');
-            $table->string('cp_number');
+            $table->integer('hospital_id');
+            $table->string('modality');
+            $table->time('time_detected_at');
+            $table->date('date_detected_at');
+            $table->string('cp_name')->nullable();
+            $table->string('cp_number')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ class CreateRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requests');
+        Schema::dropIfExists('requestsOrders');
     }
 }

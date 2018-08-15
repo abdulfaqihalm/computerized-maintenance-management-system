@@ -11,7 +11,7 @@ class PurchaseOrderController extends Controller
      * Authenticating this controller 
      */
     public function __construct() {
-        $this->middleware('role:Admin');
+        $this->middleware('role:Admin|Logistic');
     }
     
     /**
@@ -21,7 +21,8 @@ class PurchaseOrderController extends Controller
      */
     public function index()
     {
-        //
+        $purchase_orders = PurchaseOrder::all(); 
+        return view('purchaseOrders.index',['purchase_orders'=>$purchase_orders]); 
     }
 
     /**
@@ -31,7 +32,7 @@ class PurchaseOrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('purchaseOrders.create'); 
     }
 
     /**

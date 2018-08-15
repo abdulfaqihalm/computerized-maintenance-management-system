@@ -12,7 +12,9 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Purchase Orders Lists<a href="{{route('purchase-order.create')}}"><button class="btn btn-outline-info float-right">Create New Purchase Order</button></a></h3>
+                <h3 class="page-title card-header">Purchase Orders Lists
+                    <a href="{{route('purchase-order.create')}}"><button class="btn btn-outline-info float-right">Create New Purchase Order</button></a>
+                </h3>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped table-bordered" id="poList">
@@ -28,18 +30,19 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Beli magnet</td>
-                                <td>Gantry</td>
-                                <td>asdfadsf</td>
-                                <td>3</td>
-                                <td>50.000</td>
-                                <td>
-                                    <a href="#" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
-                                    <a href="#" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
-                                </td>
-                            </tr>
+                            @foreach($purchase_orders as $purchase_order)
+                                <tr>
+                                    <td>{{ $purchase_order->title }}</td>
+                                    <td>{{ $purchase_order->category }}</td>
+                                    <td>{{ $purchase_order->name }}</td>
+                                    <td>{{ $purchase_order->quantity }}</td>
+                                    <td>{{ $purchase_order->cost }}</td>
+                                    <td>
+                                        <a href="#" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                        <a href="#" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
+                                    </td>
+                                </tr>
+                            @endforeach                                
                             </tbody>
                         </table>
                     </div>

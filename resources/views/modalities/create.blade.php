@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','| Create Index')
+@section('title','| Create Modality')
 
 @section('stylesheets')
     <!-- For addition styelsheets -->
@@ -11,20 +11,18 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8 ">
             <div class="card">
-                <h3 class="page-title card-header">Add New Site</h3>
+                <h3 class="page-title card-header">Add New Modality</h3>
                 <div class="card-body">
-                    <form class="form-horizontal" action="{{route('site.store')}}" method="POST">
+                    <form class="form-horizontal" action="{{route('modality.store')}}" method="POST">
                         @csrf
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="hospital">Hospital</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="hospital" name="hospital" placeholder="Insert hospital..." required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="address">Address</label>
-                            <div class="col-lg-8">
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Insert address..." required>
+                                <select class="form-control" name="hospital_id">
+                                    @foreach($hospitals as $hospital)
+                                        <option value ='{{$hospital->id}}'>{{$hospital->name}}</option>
+                                    @endforeach 
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">

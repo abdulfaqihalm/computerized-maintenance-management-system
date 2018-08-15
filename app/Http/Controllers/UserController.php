@@ -52,11 +52,28 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id);
-        
+        if($request->email == $user->email)
+        {
+            $this->validate($request,[
+                'email' => 'required|string|email|max:255',
+            ]);
+        } else 
+        {
+            $this->validate($request,[
+                'email' => 'required|string|email|max:255|unique:users',
+            ]);
+        }
         $this->validate($request,[
+            'name' => 'required|string|max:255',
             'role' => 'required|string|max:255',
+            'password' => 'required|string|min:6|confirmed',
         ]);
+
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
         
+        $user->save();
         $user->roles()->sync($request->role);
 
         return redirect()->route('user.index');
