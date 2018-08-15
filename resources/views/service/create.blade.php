@@ -11,7 +11,9 @@
     <section class="row justify-content-center main-content">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Service Details<button class="btn btn-outline-info float-right" data-toggle="modal" data-target="#woModal">View Work Order Details</button></h3>
+                <h3 class="page-title card-header">Service Details
+                    <button class="btn btn-outline-info float-right" data-toggle="modal" data-target="#woModal">View Work Order Details</button>
+                </h3>
                 <div class="card-body">
                     <form class="form-horizontal" action="/action.php" id="service-form">
                         <div class="form-group row">
@@ -119,6 +121,17 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-form-label col-lg-3 text-md-right">Stages</label>
+                            <div class="col-lg-8">
+                                <div class="custom-radio">
+                                    <label class="radio-inline"><input type="radio" name="optradio" checked="checked"> In Progress</label>
+                                </div>
+                                <div class="custom-radio">
+                                    <label class="radio-inline"><input type="radio" name="optradio"> Complete</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="description">Notes</label>
                             <div class="col-lg-8">
                                 <textarea type="text" class="form-control" id="description" placeholder="Notes" required></textarea>
@@ -126,7 +139,8 @@
                         </div>
                         <div class="form-group row mb-0 mt-4 justify-content-center">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-secondary btn-block">Submit</button>
+                                <button type="submit" class="btn btn-outline-secondary mr-1">Save Changes</button>
+                                <input type="submit" class="btn btn-outline-danger" name="closed" value="Closed">Close Work Order</input>
                             </div>
                         </div>
                     </form>

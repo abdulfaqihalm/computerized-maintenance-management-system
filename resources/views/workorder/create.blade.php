@@ -11,7 +11,9 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Add New Work Order<button class="btn btn-outline-info float-right" data-toggle="modal" data-target="#requestModal">View Request</button></h3>
+                <h3 class="page-title card-header">Add New Work Order
+                    <button class="btn btn-outline-info float-right" data-toggle="modal" data-target="#requestModal">View Request</button>
+                </h3>
                 <div class="card-body">
                     <form class="form-horizontal" action="/action_page.php">
                         <div class="form-group row">

@@ -34,7 +34,7 @@
                                 <td>Down</td>
                                 <td>Timestamp</td>
                                 <td>
-                                    <button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+                                    <button class="btn btn-block btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter" id="details">Details</button>
                                     <button class="btn btn-block btn-outline-danger btn-sm">Create Work Order</button>
                                 </td>
                             </tr>
@@ -145,10 +145,6 @@
     <script>
         $(document).ready( function () {
             $('#requestsList').DataTable();
-        } );
-
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
+        });
     </script>
 @endsection

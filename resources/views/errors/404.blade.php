@@ -6,9 +6,11 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8 ">
             <div class="card">
-                <h3 class="page-title card-header">404 Not Found</h3>
-                <div class="card-body">
-                    <p>Sorry, the page you are looking for could not be found.</p>
+                <h3 class="page-title card-header" style="color: gray;">Page Not Found!</h3>
+                <div class="card-body text-center pt-0">
+                    <h1 class="display-1">404</h1>
+                    <hr>
+                    <h4>Sorry, the page you are looking for could not be found.</h4>
                 </div>
             </div>
         </div>

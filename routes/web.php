@@ -35,6 +35,16 @@ Route::get('/hospital/create', function () {
 Route::get('/hospital/edit', function () {
     return view('hospital.edit');
 });
+
+//ERROR ===================================================>
+Route::get('/403', function () {
+    return view('errors.403');
+});
+
+Route::get('/404', function () {
+    return view('errors.404');
+});
+
 // DUMMY ROUTES END ========================================================================================>
 
 Route::get('/','GuestController@getPage');
