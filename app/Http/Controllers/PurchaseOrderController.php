@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\PurchaseOrder;
+use App\Part;
 
 class PurchaseOrderController extends Controller
 {
@@ -32,7 +33,22 @@ class PurchaseOrderController extends Controller
      */
     public function create()
     {
-        return view('purchaseOrders.create'); 
+        $parts = Part::all(); 
+        return view('purchaseOrders.create', ['parts'=>$parts]); 
+    }
+
+    /**
+     * Ajax for selecting modality as selected hospital
+     *
+     * @param  app\Modality  $request
+     * @return json
+     */
+    public function selectAjax(Request $request) {
+        if($request->ajax()){
+    		$cost = Part::where('part_number',$request->part_id)->pluck("cost")->all();
+    		$data = view('purchaseOrders.ajax-select',compact('cost'))->render();
+    		return response()->json(['options'=>$data]);
+    	}
     }
 
     /**

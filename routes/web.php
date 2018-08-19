@@ -56,6 +56,10 @@ Route::resource('/user', 'UserController')->except(['show','create', 'store']);
 Route::resource('/role', 'RoleController')->except(['show', 'edit', 'update']); 
 Route::resource('/hospital', 'HospitalController')->except(['show']);
 
+// Route for Admin and Logistic
+Route::resource('/purchase-order','PurchaseOrderController')->except(['edit','update']);
+Route::post('/select-ajax-purchase-order', ['as'=>'select-ajax-purchase-order', 'uses'=>'PurchaseOrderController@selectAjax']);
+
 // Route for Admin, Site
 Route::resource('/request','RequestOrderController')->except(['edit','update', 'index']);
 Route::post('/select-ajax', ['as'=>'select-ajax','uses'=>'RequestOrderController@selectAjax']);
@@ -67,7 +71,7 @@ Route::get('/request', ['as'=>'request.index', 'uses'=>'IndexRequestOrderControl
 Route::resource('/work-order-detail','WorkOrdersDetailController');
 Route::get('/work-order-detail/{requestId}/create', ['as'=>'work-order-detail-by-request.create','uses'=>'WorkOrdersDetailController@createByRequest']);
 Route::post('/work-order-detail-by-request', ['as'=>'work-order-detail-by-request.store','uses'=>'WorkOrdersDetailController@storeByRequest']);
-Route::resource('/work-order-service-detail','WorkOrdersServiceDetailController')->except(['create']);
+Route::resource('/work-order-service-detail','ServiceDetailController')->except(['create']);
 
 
 

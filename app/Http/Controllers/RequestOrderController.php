@@ -39,7 +39,6 @@ class RequestOrderController extends Controller
     		$data = view('requests.ajax-select',compact('modalities'))->render();
     		return response()->json(['options'=>$data]);
     	}
-
     }
 
     /**

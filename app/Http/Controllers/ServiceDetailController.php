@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class WorkOrdersServiceDetailController extends Controller
+class ServiceDetailController extends Controller
 {
     /**
      * Authenticating this controller 

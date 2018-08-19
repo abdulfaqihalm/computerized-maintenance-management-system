@@ -5,7 +5,7 @@ This Computer Maintenance Management System project is the project that we've be
 
 ## Getting Started
 
-You must register yourself to use this app. There are several roles on this app : Admin, Engineer, ...... . Each of these roles comes up with different permissions. For example, Admin can control everything on the app. Meanwhile, the Engineer can only make work orders.
+You must register yourself to use this app. There are several roles on this app : Admin, Engineer, Site, Logistic. Each of these roles comes up with different permissions. For example, Admin can control everything on the app. Meanwhile, the Engineer can only make work orders and service details.
 
 ## Configuration
 ### Prerequisites
@@ -17,7 +17,6 @@ You must register yourself to use this app. There are several roles on this app 
 ### Package
 
 - [Entrust Package](https://github.com/Zizaco/entrust)
-- [Forms & HTML Package](https://laravelcollective.com/docs/5.2/html) 
 
 
 ### Installing
@@ -36,7 +35,7 @@ You must register yourself to use this app. There are several roles on this app 
 
 - This app using mysql as default database
 - If you use mysql, you can edit the default scheme, tables, and other things with DB GUI (MySQL Workbench)
-- NOTE : If you install the newest version of MySQL server (V. , you will get some errors
+- NOTE : If you install the newest version of MySQL server (V.8.0 , you will get some errors warning.)
 
 
 ### Running the tests
@@ -69,9 +68,4 @@ This project has specific requirements. But if you feel you can contribute, dont
 *  [Farhad Zamani](https://github.com/farzamani) - *Initial work*
 
 See also the list of [contributors](https://github.com/abdulfaqihalm/cmms/contributors) who participated in this project.
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 

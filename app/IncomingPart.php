@@ -4,13 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PurchaseOrder extends Model
+class IncomingPart extends Model
 {
-    protected $table = 'purchaseOrders';
+    protected $table = 'incomingParts';
 
-    public function part() 
+    public function part()
     {
         $this->belongsTo('App\Part');
     }
-
 }

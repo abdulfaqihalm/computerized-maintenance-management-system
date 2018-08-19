@@ -34,21 +34,27 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="name">Description/Name</label>
+                            <label class="col-form-label col-lg-3 text-md-right" for="block">Block</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="name" name="description" placeholder="Insert description/name..." required>
+                                <input type="text" class="form-control" id="block" name="block" placeholder="Insert modality..." required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 text-md-right" for="quantity">Quantity</label>
+                            <label class="col-form-label col-lg-3 text-md-right" for="name">Description</label>
                             <div class="col-lg-8">
-                                <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Insert quantity..." required>
+                                <input type="text" class="form-control" id="name" name="description" placeholder="Insert description..." required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="cost">Cost</label>
                             <div class="col-lg-8">
                                 <input type="number" class="form-control" id="cost" name="cost" placeholder="Insert cost..." required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-lg-3 text-md-right" for="quantity">Quantity</label>
+                            <div class="col-lg-8">
+                                <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Insert quantity..." required>
                             </div>
                         </div>
                         <div class="form-group row mb-0 mt-4 justify-content-center">

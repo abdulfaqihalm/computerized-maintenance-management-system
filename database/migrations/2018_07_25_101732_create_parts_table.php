@@ -14,14 +14,16 @@ class CreatePartsTable extends Migration
     public function up()
     {
         Schema::create('parts', function (Blueprint $table) {
-            $table->increments('id');
             $table->string('part_number');
             $table->string('modality');
             $table->string('category');
+            $table->string('block');
             $table->string('description');
-            $table->integer('quantity');
             $table->integer('cost');
+            $table->integer('quantity');
             $table->timestamps();
+
+            $table->primary('part_number');
         });
     }
 

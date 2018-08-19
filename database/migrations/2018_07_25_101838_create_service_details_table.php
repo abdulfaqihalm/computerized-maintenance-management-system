@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWorkOrdersServiceDetailsTable extends Migration
+class CreateServiceDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateWorkOrdersServiceDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('workOrdersServiceDetails', function (Blueprint $table) {
+        Schema::create('serviceDetails', function (Blueprint $table) {
             $table->increments('id');
             $table->string('task');
-            $table->string('object');
-            $table->integer('part_qty');
-            // this must be include to the other table 
-            $table->dateTime('start_time');
-            $table->dateTime('finish_time'); 
+            $table->text('notes');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateWorkOrdersServiceDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workOrdersServiceDetails');
+        Schema::dropIfExists('serviceDetails');
     }
 }

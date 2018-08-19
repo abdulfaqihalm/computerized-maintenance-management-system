@@ -47,7 +47,7 @@
                                         <option value="{{$hospital->id}}">{{$hospital->name}}</option>
                                     @endforeach
                                 </select>
-                        </div>
+                            </div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-form-label col-lg-3 text-md-right" for="modality">Modality</label>

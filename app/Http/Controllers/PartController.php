@@ -49,17 +49,20 @@ class PartController extends Controller
             'part_number'=> 'required|max:255|unique:parts',
             'modality' =>'required|max:255',
             'category'=>'required|max:255',
+            'block'=>'required|max:255',
             'description'=>'required|max:255',
-            'quantity'=>'required|integer',
             'cost'=>'required|integer',
+            'quantity'=>'required|integer',
         ]);
 
         $part->part_number = $request->input('part_number');
         $part->modality = $request->input('modality');
         $part->category = $request->input('category');
+        $part->block = $request->input('block');
         $part->description = $request->input('description');
-        $part->quantity = $request->input('quantity');
         $part->cost = $request->input('cost');
+        $part->quantity = $request->input('quantity');
+        
 
         $part->save(); 
 
@@ -113,17 +116,19 @@ class PartController extends Controller
         $this->validate($request, [
             'modality' =>'required|max:255',
             'category'=>'required|max:255',
+            'block'=>'required|max:255',
             'description'=>'required|max:255',
-            'quantity'=>'required|integer',
             'cost'=>'required|integer',
+            'quantity'=>'required|integer',
         ]);
 
         $part->part_number = $request->input('part_number');
         $part->modality = $request->input('modality');
         $part->category = $request->input('category');
+        $part->block = $request->input('block');
         $part->description = $request->input('description');
-        $part->quantity = $request->input('quantity');
         $part->cost = $request->input('cost');
+        $part->quantity = $request->input('quantity');
 
         $part->save(); 
 

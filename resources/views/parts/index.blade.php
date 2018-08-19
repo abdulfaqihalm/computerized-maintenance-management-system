@@ -18,13 +18,13 @@
                         <table class="table table-hover table-bordered table-striped" id="partsList">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Part Number</th>
                                 <th scope="col">Modality</th>
                                 <th scope="col">Category</th>
-                                <th scope="col">Description/Name</th>
-                                <th scope="col">Quantity</th>
+                                <th scope="col">Block</th>
+                                <th scope="col">Description</th>
                                 <th scope="col">Cost</th>
+                                <th scope="col">Quantity</th>
                                 <th scope="col">Last Updated Date</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -32,17 +32,17 @@
                             <tbody>
                             @foreach($parts as $part)
                                 <tr>
-                                    <th scope="row">{{$part->id}}</th>
-                                    <td>{{$part->part_number}}</td>
+                                    <th scope="row">{{$part->part_number}}</th>
                                     <td>{{$part->modality}}</td>
                                     <td>{{$part->category}}</td>
+                                    <td>{{$part->block}}</td>
                                     <td>{{$part->description}}</td>
-                                    <td>{{$part->quantity}}</td>
                                     <td>{{$part->cost}}</td>
-                                    <td>{{date('j-M-Y ',strtotime($part->updated_at))}}</td>
+                                    <td>{{$part->quantity}}</td>
+                                    <td>{{date('j-M-Y | H:i ',strtotime($part->updated_at))}}</td>
                                     <td>
-                                        <a href="{{route('part.edit', $part->id)}}" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
-                                        <form action="{{route('part.destroy', $part->id)}}" method="POST">
+                                        <a href="{{route('part.edit', $part->part_number)}}" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
+                                        <form action="{{route('part.destroy', $part->part_number)}}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button>

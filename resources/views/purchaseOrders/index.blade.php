@@ -20,12 +20,11 @@
                         <table class="table table-hover table-striped table-bordered" id="poList">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Name</th>
+                                <th scope="col">Part Number</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Cost</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
@@ -33,10 +32,10 @@
                             @foreach($purchase_orders as $purchase_order)
                                 <tr>
                                     <td>{{ $purchase_order->title }}</td>
-                                    <td>{{ $purchase_order->category }}</td>
-                                    <td>{{ $purchase_order->name }}</td>
-                                    <td>{{ $purchase_order->quantity }}</td>
+                                    <td>{{ $purchase_order->part_id }}</td>
+                                    <td>{{ $purchase_order->qty }}</td>
                                     <td>{{ $purchase_order->cost }}</td>
+                                    <td>{{ $purchase_order->status }}</td>
                                     <td>
                                         <a href="#" style="text-decoration: none"><button class="btn btn-block btn-outline-info btn-sm">Edit</button></a>
                                         <a href="#" style="text-decoration: none"><button class="btn btn-block btn-outline-danger btn-sm mt-1">Delete</button></a>
