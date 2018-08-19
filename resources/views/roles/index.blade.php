@@ -12,7 +12,7 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Role Lists <a href="{{route('role.create')}}"><button class="btn btn-outline-info float-right">Create New Role</button></a></h3>
+                <h3 class="page-title card-header">Role List <a href="{{route('role.create')}}"><button class="btn btn-outline-info float-right">Create New Role</button></a></h3>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped table-bordered" id="rolesList">

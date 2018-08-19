@@ -6,6 +6,7 @@ This Computer Maintenance Management System project is the project that we've be
 ## Getting Started
 
 You must register yourself to use this app. There are several roles on this app : Admin, Engineer, Site, Logistic. Each of these roles comes up with different permissions. For example, Admin can control everything on the app. Meanwhile, the Engineer can only make work orders and service details.
+For registering your user, please comment the __'$this->middleware(role:Admin);'__ in the register user controller so that you can access the register form. After that, uncomment and create the role for the user : __Admin, Engineer, Site, Logistic__ 
 
 ## Configuration
 ### Prerequisites

@@ -12,7 +12,7 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Work Orders Lists
+                <h3 class="page-title card-header">Work Order List
                     @if(Auth::user()->hasRole('Admin'))
                     <a href="{{ route('work-order-detail.create') }}"><button class="btn btn-outline-info float-right">Create New Work Order</button></a>
                     @endif

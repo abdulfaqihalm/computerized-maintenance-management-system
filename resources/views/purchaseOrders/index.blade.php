@@ -12,7 +12,7 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Purchase Orders Lists
+                <h3 class="page-title card-header">Purchase Order List
                     <a href="{{route('purchase-order.create')}}"><button class="btn btn-outline-info float-right">Create New Purchase Order</button></a>
                 </h3>
                 <div class="card-body">

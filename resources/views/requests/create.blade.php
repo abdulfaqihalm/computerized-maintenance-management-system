@@ -18,13 +18,13 @@
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="title">Title</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" id="title" name="title" placeholder="Singkat dan jelas!" required>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Add title.." required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label col-lg-3 text-md-right" for="description">Description</label>
                             <div class="col-lg-8">
-                                <textarea type="text" class="form-control" id="description" name="description" placeholder="Jelaskan lebih rinci . . ." required></textarea>
+                                <textarea type="text" class="form-control" id="description" name="description" placeholder="Add description" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -82,13 +82,13 @@
                                     <div class='col-md-7'>
                                         <div class="card card-label">
                                             <label class="control-label card-header text-center" for="name">Name</label>
-                                            <input type="text" class="form-control" id="name" name="cp_name" placeholder="Nama Jelas" required>
+                                            <input type="text" class="form-control" id="name" name="cp_name" placeholder="Add your name" required>
                                         </div>
                                     </div>
                                     <div class='col-md-5'>
                                         <div class="card card-label">
                                             <label class="control-label card-header text-center" for="phone">Phone</label>
-                                            <input type="text" class="form-control" id="phone" name="cp_number" placeholder="Nomor Handphone" required>
+                                            <input type="text" class="form-control" id="phone" name="cp_number" placeholder="Your phone number" required>
                                         </div>
                                     </div>
                                 </div>

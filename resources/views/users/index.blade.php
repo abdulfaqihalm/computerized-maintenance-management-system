@@ -12,7 +12,7 @@
     <section class="row main-content justify-content-center">
         <div class="col-lg-8">
             <div class="card shadow-sm">
-                <h3 class="page-title card-header">Users Lists <a href="{{route('register.user')}}"><button class="btn btn-outline-info float-right">Create New User</button></a></h3>
+                <h3 class="page-title card-header">User List <a href="{{route('register.user')}}"><button class="btn btn-outline-info float-right">Create New User</button></a></h3>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped table-bordered" id="usersList">
