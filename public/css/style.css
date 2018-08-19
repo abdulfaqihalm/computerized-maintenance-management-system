@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 html {
     height:100%;
-=======
-* {
-    margin : 0px;
-    padding: 0px;
->>>>>>> f98e99dd2ef8fde25cb06e935e0e3ef64d565bd5
 }
 
 body {
@@ -25,21 +19,12 @@ body {
 
 .main-content {
     margin-top: 120px;
-<<<<<<< HEAD
     padding-bottom: 120px;
     margin-bottom: 5px;
-=======
-    padding-bottom: 80px;
-}
-
-.footer {
-    bottom: 0;
->>>>>>> f98e99dd2ef8fde25cb06e935e0e3ef64d565bd5
 }
 
 footer {
     position: absolute;
-<<<<<<< HEAD
     bottom: 0;
     width: 100%;
     height: 70px;
@@ -53,11 +38,6 @@ footer {
 
 th {
     text-align: center;
-=======
-    width: 100%;
-    height: 70px;
-    padding-bottom: 20px;
->>>>>>> f98e99dd2ef8fde25cb06e935e0e3ef64d565bd5
 }
 
 .col-form-label:hover {
