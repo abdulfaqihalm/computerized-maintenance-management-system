@@ -1,0 +1,37 @@
+* {
+    margin : 0px;
+    padding: 0px;
+}
+
+.navbar {
+    background-color: #798190;
+}
+
+.col-form-label:hover {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.container-fluid {
+    background-color: #CEEBFB;
+}
+
+section {
+    min-height: 400px;
+}
+
+body {
+    font-family: Raleway, sans-serif !important;
+}
+
+.main-content {
+    margin-top: 100px;
+}
+
+.time-label .card-header{
+    padding: 5px !important;
+}
+
+footer {
+    margin-top: 50px;
+}

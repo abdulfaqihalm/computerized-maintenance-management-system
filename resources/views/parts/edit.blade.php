@@ -4,6 +4,7 @@
 
 @section('stylesheets')
     <!-- For addition styelsheets -->
+<<<<<<< HEAD
 @endsection
 
 @section('content')
@@ -68,8 +69,18 @@
             </div>
         </div>
     </section>
+=======
+@endsection 
+
+@section('content')
+    <!-- Contents of this page -->
+>>>>>>> f98e99dd2ef8fde25cb06e935e0e3ef64d565bd5
 @endsection
 
 @section('scripts')
     <!-- Scripts for this page -->
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> f98e99dd2ef8fde25cb06e935e0e3ef64d565bd5

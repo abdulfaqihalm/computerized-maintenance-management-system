@@ -7,7 +7,11 @@
     <div class="row justify-content-center main-content">
         <div class="col-md-8 col-md-offset-2">
             <div class="card shadow-sm">
+<<<<<<< HEAD:resources/views/users/edit.blade.php
                 <h3 class="text-center card-header">User Edit</h3>
+=======
+                <h3 class="text-center card-header">Role Register</h3>
+>>>>>>> f98e99dd2ef8fde25cb06e935e0e3ef64d565bd5:resources/views/auth/role-register.blade.php
                 <div class="card-body">
                     <form method="POST" action="{{route('user.update', $user->id)}}">   
                         @csrf
